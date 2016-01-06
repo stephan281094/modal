@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple vanilla JS modal</title>
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <button data-modaltrigger="awesome">Open modal</button>
+  <div class="modal-wrapper">
+    <div data-modal="awesome">
+      <h1>This is an awesome modal</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ducimus magnam aliquam nihil assumenda, eaque voluptate inventore veniam eius soluta placeat fugiat repellat odio illo quod aliquid sequi molestiae omnis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ducimus magnam aliquam nihil assumenda, eaque voluptate inventore veniam eius soluta placeat fugiat repellat odio illo quod aliquid sequi molestiae omnis.</p>
+      <button data-modaltrigger="epic">Nested modal</button>
+    </div>
+    <div data-modal="epic">
+      <h1>This is an epic modal</h1>
+      <button data-modaltrigger="epic">Nested modal</button>
+    </div>
+  </div>
+  <script src="modal.js"></script>
+  <script>
+    window.onload = function () {
+      modal.init()
+    }
+  </script>
+</body>
+</html>
