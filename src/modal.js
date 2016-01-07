@@ -57,6 +57,9 @@
         '[data-modal="' + modalName + '"]'
       )[0]
 
+      // If modal is already open, don't do anything
+      if (openModals.indexOf(modal) >= 0) return
+
       if (modal) {
         modal.classList.add('visible')
         modalWrapper.classList.add('visible')
