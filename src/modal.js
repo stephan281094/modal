@@ -1,6 +1,6 @@
 (function () {
-  var modalWrapper = document.querySelector('.modal-wrapper')
-  var dataModals = document.querySelectorAll('[data-modal]')
+  var modalWrapper = null
+  var dataModals = null
   var openModals = []
 
   function disableParentEvents () {
@@ -32,6 +32,9 @@
 
   var api = {
     init: function () {
+      modalWrapper = document.querySelector('.modal-wrapper')
+      dataModals = document.querySelectorAll('[data-modal]')
+
       var triggers = document.querySelectorAll('[data-modaltrigger]')
       for (var i = 0; i < triggers.length; i++) {
         triggers[i].addEventListener('click', function (event) {

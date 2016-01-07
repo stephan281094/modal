@@ -1,0 +1,22 @@
+{
+  "name": "modal",
+  "version": "0.1.0",
+  "description": "A simple dependency-free JavaScript modal",
+  "main": "src/modal.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "standard src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephan281094/modal.git"
+  },
+  "author": "Stephan de Vries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephan281094/modal/issues"
+  },
+  "homepage": "https://github.com/stephan281094/modal#readme"
+}
