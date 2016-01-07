@@ -1,6 +1,5 @@
-*,
-*:before,
-*:after {
+.modal-wrapper,
+[data-modal] {
   box-sizing: border-box;
 }
 
