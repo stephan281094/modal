@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/stephan281094/modal/issues"
   },
-  "homepage": "https://github.com/stephan281094/modal#readme"
+  "homepage": "https://github.com/stephan281094/modal#readme",
+  "devDependencies": {
+    "standard": "^5.4.1"
+  }
 }
