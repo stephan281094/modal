@@ -11,14 +11,6 @@
       modal.addEventListener('click', function (event) {
         event.stopPropagation()
       })
-
-      // Disable parent scrolling when hovering modal
-      modal.addEventListener('mouseover', function (event) {
-        document.body.style.overflow = 'hidden'
-      })
-      modal.addEventListener('mouseout', function (event) {
-        document.body.style.overflow = 'auto'
-      })
     }
   }
 
@@ -28,6 +20,13 @@
         api.closeCurrent()
       }
     })
+  }
+
+  function closeModalWrapper () {
+    modalWrapper.classList.remove('visible')
+
+    // Re-enable parent scrolling
+    document.body.style.overflow = 'auto'
   }
 
   var api = {
@@ -64,6 +63,9 @@
         modal.classList.add('visible')
         modalWrapper.classList.add('visible')
 
+        // Disable parent scrolling when modal is open
+        document.body.style.overflow = 'hidden'
+
         openModals.push(modal)
       } else {
         console.error('Could not find modal with name "%s"', modalName)
@@ -79,7 +81,7 @@
       modal.classList.remove('visible')
 
       if (openModals.length === 0) {
-        modalWrapper.classList.remove('visible')
+        closeModalWrapper()
       }
 
       if (typeof cb === 'function') {
@@ -90,7 +92,7 @@
     closeAll: function (cb) {
       for (var i = 0; i < dataModals.length; i++) {
         dataModals[i].classList.remove('visible')
-        modalWrapper.classList.remove('visible')
+        closeModalWrapper()
       }
 
       if (typeof cb === 'function') {
