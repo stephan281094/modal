@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <title>Simple vanilla JS modal</title>
   <link rel="stylesheet" href="modal.css">
-  <style>
-    /* Example specific styling */
-    [data-modal] {
-      padding: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="example.css">
 </head>
-<body>
-  <button data-modaltrigger="awesome">Open modal</button>
+<body data-modaltrigger="awesome">
+  <div class="wrapper">
+    <h1>click anywhere to <br> open a modal</h1>
+  </div>
+
+  <!-- Put modals in the wrapper -->
   <div class="modal-wrapper">
     <div data-modal="awesome">
       <h1>This is an awesome modal</h1>
