@@ -7,19 +7,25 @@
   <link rel="stylesheet" type="text/css" href="example.css">
 </head>
 <body>
-  <div class="wrapper" data-modaltrigger="awesome">
-    <div class="text">
-      <h1>click anywhere to <br> open a modal</h1>
+  <section id="hero">
+    <div class="wrapper">
+      <h1>Modal</h1>
+      <h6>A delightful dependency-free javascript modal.</h6>
+      <a class="button" data-modaltrigger="awesome">View a demo</a>
+      <a href="https://github.com/stephan281094/modal" class="button">View on GitHub</a>
     </div>
-  </div>
+  </section>
 
   <!-- Put modals in the wrapper -->
   <div class="modal-wrapper">
     <div data-modal="awesome">
       <h1>This is an awesome modal</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ducimus magnam aliquam nihil assumenda, eaque voluptate inventore veniam eius soluta placeat fugiat repellat odio illo quod aliquid sequi molestiae omnis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ducimus magnam aliquam nihil assumenda, eaque voluptate inventore veniam eius soluta placeat fugiat repellat odio illo quod aliquid sequi molestiae omnis.</p>
-      <button data-modaltrigger="epic">Nested modal</button>
+      <p>
+        Containing some pretty awesome text that really doesn't make any sense.
+        But hey, the text is just here to illustrate what people would put
+        inside a modal.
+      </p>
+      <button class="button" data-modaltrigger="epic">Open another modal</button>
     </div>
     <div data-modal="epic">
       <h1>This is an epic modal</h1>
