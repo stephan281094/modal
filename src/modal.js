@@ -51,7 +51,7 @@
       closeModalsOnEsc()
     },
 
-    open: function open (modalName, cb) {
+    open: function (modalName, cb) {
       var modal = document.querySelectorAll(
         '[data-modal="' + modalName + '"]'
       )[0]
