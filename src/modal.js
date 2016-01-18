@@ -71,9 +71,7 @@
         console.error('Could not find modal with name "%s"', modalName)
       }
 
-      if (typeof cb === 'function') {
-        cb()
-      }
+      if (typeof cb === 'function') cb()
     },
 
     closeCurrent: function (cb) {
@@ -84,9 +82,7 @@
         closeModalWrapper()
       }
 
-      if (typeof cb === 'function') {
-        cb()
-      }
+      if (typeof cb === 'function') cb()
     },
 
     closeAll: function (cb) {
@@ -95,9 +91,7 @@
         closeModalWrapper()
       }
 
-      if (typeof cb === 'function') {
-        cb()
-      }
+      if (typeof cb === 'function') cb()
     }
   }
 
