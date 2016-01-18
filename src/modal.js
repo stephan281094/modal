@@ -30,7 +30,7 @@
   }
 
   var api = {
-    init: function () {
+    init () {
       modalWrapper = document.querySelector('.modal-wrapper')
       dataModals = document.querySelectorAll('[data-modal]')
 
@@ -51,7 +51,7 @@
       closeModalsOnEsc()
     },
 
-    open: function (modalName, cb) {
+    open (modalName, cb) {
       var modal = document.querySelectorAll(
         '[data-modal="' + modalName + '"]'
       )[0]
@@ -74,7 +74,7 @@
       if (typeof cb === 'function') cb()
     },
 
-    closeCurrent: function (cb) {
+    closeCurrent (cb) {
       var modal = openModals.pop()
       modal.classList.remove('visible')
 
@@ -85,7 +85,7 @@
       if (typeof cb === 'function') cb()
     },
 
-    closeAll: function (cb) {
+    closeAll (cb) {
       for (var i = 0; i < dataModals.length; i++) {
         dataModals[i].classList.remove('visible')
         closeModalWrapper()
