@@ -16,5 +16,8 @@ Click the following link to see the modal in action: [demo](https://stephan28109
 * Open the modal by clicking any `data-modaltrigger="somename"`
 * Or simply call the open function: `modal.open('awesome')`
 
+## Developing
+* Run `npm run dev` to run webpack and watch for changes
+
 ## License
 This project was created by [Stephan](https://github.com/stephan281094) and released under [MIT](LICENSE).
