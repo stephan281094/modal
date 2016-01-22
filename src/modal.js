@@ -8,14 +8,14 @@
       var modal = dataModals[i]
 
       // Disable closing the modal wrapper if modal gets clicked
-      modal.addEventListener('click', function (event) {
+      modal.addEventListener('click', (event) => {
         event.stopPropagation()
       })
     }
   }
 
   function closeModalsOnEsc () {
-    window.addEventListener('keyup', function (event) {
+    window.addEventListener('keyup', (event) => {
       if (openModals.length && event.keyCode === 27) {
         api.closeCurrent()
       }
@@ -36,14 +36,14 @@
 
       var triggers = document.querySelectorAll('[data-modaltrigger]')
       for (var i = 0; i < triggers.length; i++) {
-        triggers[i].addEventListener('click', function (event) {
+        triggers[i].addEventListener('click', (event) => {
           var modalName = event.target.dataset.modaltrigger
           api.open(modalName)
         })
       }
 
       // Close all modals when clicking outside modal
-      modalWrapper.addEventListener('click', function (event) {
+      modalWrapper.addEventListener('click', (event) => {
         api.closeCurrent()
       })
 
