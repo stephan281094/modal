@@ -1,11 +1,11 @@
 (function () {
-  var modalWrapper = null
-  var dataModals = null
-  var openModals = []
+  let modalWrapper = null
+  let dataModals = null
+  let openModals = []
 
   function disableParentEvents () {
-    for (var i = 0; i < dataModals.length; i++) {
-      var modal = dataModals[i]
+    for (let i = 0; i < dataModals.length; i++) {
+      let modal = dataModals[i]
 
       // Disable closing the modal wrapper if modal gets clicked
       modal.addEventListener('click', (event) => {
@@ -29,15 +29,15 @@
     document.body.style.overflow = 'auto'
   }
 
-  var api = {
+  let api = {
     init () {
       modalWrapper = document.querySelector('.modal-wrapper')
       dataModals = document.querySelectorAll('[data-modal]')
 
-      var triggers = document.querySelectorAll('[data-modaltrigger]')
-      for (var i = 0; i < triggers.length; i++) {
+      let triggers = document.querySelectorAll('[data-modaltrigger]')
+      for (let i = 0; i < triggers.length; i++) {
         triggers[i].addEventListener('click', (event) => {
-          var modalName = event.target.dataset.modaltrigger
+          let modalName = event.target.dataset.modaltrigger
           api.open(modalName)
         })
       }
@@ -52,7 +52,7 @@
     },
 
     open (modalName, cb) {
-      var modal = document.querySelectorAll(
+      let modal = document.querySelectorAll(
         '[data-modal="' + modalName + '"]'
       )[0]
 
@@ -75,7 +75,7 @@
     },
 
     closeCurrent (cb) {
-      var modal = openModals.pop()
+      let modal = openModals.pop()
       modal.classList.remove('visible')
 
       if (openModals.length === 0) {
@@ -86,7 +86,7 @@
     },
 
     closeAll (cb) {
-      for (var i = 0; i < dataModals.length; i++) {
+      for (let i = 0; i < dataModals.length; i++) {
         dataModals[i].classList.remove('visible')
         closeModalWrapper()
       }
