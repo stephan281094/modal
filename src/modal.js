@@ -3,7 +3,7 @@
   let dataModals = null
   let openModals = []
 
-  function disableParentEvents () {
+  let disableParentEvents = () => {
     for (let i = 0; i < dataModals.length; i++) {
       let modal = dataModals[i]
 
@@ -14,7 +14,7 @@
     }
   }
 
-  function closeModalsOnEsc () {
+  let closeModalsOnEsc = () => {
     window.addEventListener('keyup', (event) => {
       if (openModals.length && event.keyCode === 27) {
         api.closeCurrent()
@@ -22,7 +22,7 @@
     })
   }
 
-  function closeModalWrapper () {
+  let closeModalWrapper = () => {
     modalWrapper.classList.remove('visible')
 
     // Re-enable parent scrolling
